@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :topics
+  map.resources :file_notes
 
 
-  map.root :controller => "file_notes", :action => :new
+  map.root :controller => "file_notes", :action => "new"
   
   # The priority is based upon order of creation: first created -> highest priority.
 
