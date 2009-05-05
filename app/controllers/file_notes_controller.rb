@@ -1,6 +1,7 @@
 class FileNotesController < ApplicationController
   def new
     @file_note = FileNote.new
+    @topics = Topic.all
   end
 
   def create

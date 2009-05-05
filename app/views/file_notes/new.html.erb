@@ -11,6 +11,19 @@
     <%= f.label :narrative %><br />
     <%= f.text_area :narrative, :rows => 10 %>
   </p>
+  
+  <p>
+    <%= f.label :topics %><br />
+    
+    <% for topic in @topics %>
+    <div>
+      <%= check_box_tag "file_note[topic_ids][]", topic.id %>
+      <%= topic.name %>
+    </div>
+    <% end %>
+    
+  </p>
+  
   <p>
     <%= f.submit 'Generate' %>
   </p>

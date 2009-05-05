@@ -4,4 +4,8 @@
 Contact Type: <%= @file_note.contact_type %>
 
 <%= @file_note.narrative %>
+
+<% for topic in @file_note.topics -%>
+<%= topic.body %>
+<% end -%>
 </textarea>
